@@ -1,12 +1,17 @@
+import Synonyms from "./Synonyms";
+
 export default function DictionaryDisplay(props) {
   return (
     <div className="dictionary-definitions">
       <h2> {props.definition.partOfSpeech}</h2>
-      <p> {props.definition.definition}</p>
+      <div> {props.definition.definition}</div>
       {props.definition.example && (
-        <p className="font-italic">"{props.definition.example}"</p>
+        <div className="font-italic">"{props.definition.example}"</div>
       )}
-      {props.definition.synonyms && <p> {props.definition.synonyms[0]}</p>}
+
+      <div>
+        <Synonyms synonyms={props.definition.synonyms} />
+      </div>
     </div>
   );
 }
