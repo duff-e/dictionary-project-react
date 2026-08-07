@@ -4,20 +4,24 @@ export default function DictionaryResult({ result }) {
   if (result) {
     return (
       <div className="dictionary-results">
-        <h1>{result.word}</h1>
-        <p>{result.phonetic}</p>
-        <div className="dictionary-definitions">
-          {result.meanings.map(function (displayDefinition, index) {
-            if (index < 2) {
-              return (
-                <div key={index}>
-                  <DictionaryDisplay definition={displayDefinition} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+        <hr />
+        <h1 className="word mt-4 mb-4 p-2">{result.word}</h1>
+        <p>/{result.phonetic}/</p>
+        <hr />
+        <div className="dictionary-definitions ">
+          <div className="row mt-5">
+            {result.meanings.map(function (displayDefinition, index) {
+              if (index < 2) {
+                return (
+                  <div className="col-md-6 mb-4 d-flex" key={index}>
+                    <DictionaryDisplay definition={displayDefinition} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
+          </div>
         </div>
       </div>
     );

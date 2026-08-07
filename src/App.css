@@ -1,3 +1,61 @@
 body {
+  background-color: #f2ead8;
   padding: 10px;
+}
+
+.dictionary {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  font-family: "Playfair Display", serif;
+}
+
+.input-bar {
+  background-color: #fdf7eb;
+  border: 2px solid #9b7046;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 50%;
+}
+
+.search-button {
+  background-color: #c4922a;
+  color: #f2ead8;
+  border: 2px solid #9b7046;
+  border-left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.word {
+  font-family: "Playfair Display", serif;
+  font-size: 86px;
+  font-weight: bold;
+}
+
+.dictionary-display {
+  font-family: "Lora", serif;
+  background-color: #fdf7eb;
+  border: 1px solid #9b70464c;
+  border-radius: 3px;
+  line-height: 2.5;
+}
+
+.part-of-speech {
+  font-size: 48px;
+}
+
+.synonym-title {
+  color: #9b7046;
+}
+
+.synonym-word {
+  padding: 4px 10px;
+  margin: 0px 5px 0 0;
+  border: 1px solid #9b70464c;
+  border-radius: 3px;
+  background-color: #f2ead8;
+  color: #5c3d1e;
 }
