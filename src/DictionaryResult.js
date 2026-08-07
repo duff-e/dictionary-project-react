@@ -3,9 +3,9 @@ import DictionaryDisplay from "./DictionaryDisplay";
 export default function DictionaryResult({ result }) {
   if (result) {
     return (
-      <div className="dictionary-results">
+      <div className="dictionary-results mt-5 mb-5">
         <hr />
-        <h1 className="word mt-4 mb-4 p-2">{result.word}</h1>
+        <h2 className="word mt-4 mb-4 p-2">{result.word}</h2>
         <p>/{result.phonetic}/</p>
         <hr />
         <div className="dictionary-definitions ">

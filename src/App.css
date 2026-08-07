@@ -31,7 +31,7 @@ form {
 
 .word {
   font-family: "Playfair Display", serif;
-  font-size: 86px;
+  font-size: 72px;
   font-weight: bold;
 }
 
@@ -39,12 +39,12 @@ form {
   font-family: "Lora", serif;
   background-color: #fdf7eb;
   border: 1px solid #9b70464c;
-  border-radius: 3px;
+
   line-height: 2.5;
 }
 
 .part-of-speech {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .synonym-title {
@@ -55,7 +55,63 @@ form {
   padding: 4px 10px;
   margin: 0px 5px 0 0;
   border: 1px solid #9b70464c;
-  border-radius: 3px;
   background-color: #f2ead8;
   color: #5c3d1e;
+}
+
+.images-subtitle {
+  font-family: "Lora", serif;
+  color: #9b7046;
+  letter-spacing: 2px;
+}
+
+.images-title h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #2c1a0e;
+}
+.main-word {
+  color: #c4922a;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  gap: 15px;
+}
+
+.image-portrait {
+  grid-row: span 2;
+}
+
+.image-portrait,
+.image-small {
+  position: relative;
+  border: 1px solid #9b70464c;
+}
+
+.image-portrait img,
+.image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photographer {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  background-color: #f2ead8;
+  color: #2c1a0e;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-portrait:hover .photographer,
+.image-small:hover .photographer {
+  opacity: 0.8;
 }

@@ -8,7 +8,7 @@ export default function Synonyms(props) {
         {props.synonyms.map(function (synonyms, index) {
           if (index < 3) {
             return (
-              <span className="synonym-word font-italic" key={index}>
+              <span className="synonym-word font-italic rounded" key={index}>
                 {synonyms}{" "}
               </span>
             );

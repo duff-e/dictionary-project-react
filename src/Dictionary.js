@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import DictionaryResult from "./DictionaryResult";
+import DictionaryImages from "./DictionaryImages";
 
 export default function Dictionary() {
   const [word, setWord] = useState("");
   const [result, setResult] = useState(null);
+  const [images, setImages] = useState([]);
 
   function handleWordSearch(event) {
     setWord(event.target.value);
@@ -15,10 +17,16 @@ export default function Dictionary() {
 
     const apiKey = "40o03736bbe0e6faa9b79f5dt4af0a0f";
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
+    const apiUrlImage = `https://api.shecodes.io/images/v1/search?query=${word}&key=${apiKey}`;
     axios.get(apiUrl).then(displayDefinition);
+    axios.get(apiUrlImage).then(displayImages);
   }
   function displayDefinition(response) {
     setResult(response.data);
+  }
+
+  function displayImages(response) {
+    setImages(response.data.photos);
   }
 
   return (
@@ -35,7 +43,13 @@ export default function Dictionary() {
         />
         <input type="submit" value="Search" className="search-button p-3" />
       </form>
-      <DictionaryResult result={result} />
+      <main>
+        <DictionaryResult result={result} />
+      </main>
+      <section>
+        <hr />
+        <DictionaryImages images={images} word={word} />
+      </section>
     </div>
   );
 }
