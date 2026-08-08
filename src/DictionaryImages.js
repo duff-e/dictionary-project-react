@@ -7,7 +7,7 @@ export default function DictionaryImages(props) {
         <div className="images-title text-center ">
           <p className="images-subtitle">Visual Index</p>
           <h3 className="font-italic">
-            Illistrations of
+            Illustrations of
             <span className="main-word text-capitalize"> {props.word}</span>
           </h3>
         </div>

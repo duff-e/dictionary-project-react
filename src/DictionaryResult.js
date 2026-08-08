@@ -6,7 +6,7 @@ export default function DictionaryResult({ result }) {
       <div className="dictionary-results mt-5 mb-5">
         <hr />
         <h2 className="word mt-4 mb-4 p-2">{result.word}</h2>
-        <p>/{result.phonetic}/</p>
+        <p className="phonetic">/{result.phonetic}/</p>
         <hr />
         <div className="dictionary-definitions ">
           <div className="row mt-5">
